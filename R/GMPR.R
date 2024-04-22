@@ -1,7 +1,5 @@
 GMPR<-function(OTUmatrix, min_ct=2, intersect_no=4){
-  #datatype check
-  if(!(class(OTUmatrix) %in% c("data.frame","matrix")))
-    stop("Unknown datatype of object \"OTUmatrix\".")
+  #datatype check TODO
   rownames(OTUmatrix)->SampleName
   if(ncol(OTUmatrix)<nrow(OTUmatrix))
     warning("Sample size is larger than OTU number. Check if samples are arranged in columns.")
